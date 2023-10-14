@@ -1,3 +1,7 @@
+<?php
+// Cierra la sesión
+session_destroy();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <style>
+        body {
+            background-image: url('css/Fondo.jpeg');
+            background-size: contain; /* Ajusta la imagen al tamaño del cuerpo */
+            background-repeat: repeat; /* Evita la repetición de la imagen */
+        }
+    </style>
 </head>
 <body>
     <div class="formulario">
