@@ -67,13 +67,13 @@ form .username{
 }
 
 .username input:focus ~ label,
-.username input:focus ~ label {
+.username input:valid ~ label {
     top: -5px;
     color: #c1c1c1; /* Gris más oscuro */
 }
 
 .username input:focus ~ span::before,
-.username input:focus ~ span::before {
+.username input:valid ~ span::before {
     width: 100%;
 }
 
