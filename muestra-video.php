@@ -5,7 +5,19 @@ session_start(); // Asegúrate de haber iniciado la sesión
 if (isset($_SESSION['nombre_usuario'])) {
     $nombre_usuario = $_SESSION['nombre_usuario'];
     // Ahora puedes mostrar el nombre de usuario en tu página
-    echo "Bienvenido, $nombre_usuario!";
+    echo "Cuentanos que te parece! , $nombre_usuario!";
+
+    // Recupera el parámetro "path" de la URL
+    if (isset($_GET['path'])) {
+        $videoPath = $_GET['path'];
+
+        // Puedes utilizar $videoPath para mostrar el video o realizar otras operaciones
+        echo "<iframe width='800' height='600' src='$videoPath' frameborder='0'></iframe>";
+    } else {
+        // Maneja el caso en el que no se proporciona el parámetro "path"
+        echo "No se especificó un video para mostrar.";
+    }
+
 ?>
 
     <!DOCTYPE html>
@@ -13,7 +25,7 @@ if (isset($_SESSION['nombre_usuario'])) {
 
     <head>
         <meta charset="UTF-8">
-        <title>Página de Inicio</title>
+        <title>Video</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
@@ -36,7 +48,6 @@ if (isset($_SESSION['nombre_usuario'])) {
         </header>
 
         <main>
-            <?php echo "Region Baja California"; ?>
             <section class="video-grid">
                 <?php include('videos.php'); ?>
             </section>
@@ -52,22 +63,6 @@ if (isset($_SESSION['nombre_usuario'])) {
 
     </html>
 
-    <!-- JavaScript para abrir la ventana emergente -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const videoLinks = document.querySelectorAll('.video-link');
-
-            videoLinks.forEach(function(videoLink) {
-                videoLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Previene el comportamiento predeterminado del enlace
-
-                    const videoURL = this.getAttribute('href');
-                    window.open(videoURL, 'muestra-video', 'width=800,height=600');
-                    console.log('Clic en el video:', videoURL); // Agregar un registro en la consola
-                });
-            });
-        });
-    </script>
     </body>
 
     </html>

@@ -28,7 +28,7 @@ session_destroy();
                 ?>
         <form action="login_process.php" method="post">
             <div class="username">
-                <input type="text" name="nombre_usuario" required>
+                <input type="text" name="nombre_usuario" required >
                 <label for="nombre_usuario">Nombre de Usuario</label>
             </div>
             <div class="username">
@@ -38,7 +38,7 @@ session_destroy();
             <div class="recordar">¿Olvido su contraseña?</div>
             <input type="submit" value="Iniciar">
             <div class="registrarse">
-                Quiero hacer el <a href="$"> registro</a>
+                Quiero hacer el <a href="RegistroUsuario.php"> registro</a>
             </div>
         </form>
     </div>
