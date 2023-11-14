@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 // Incluye la conexión a la base de datos desde db.php
-include('db.php');
+include('dbMariaDB.php.php');
 
 // Inicia la sesión
 session_start();

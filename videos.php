@@ -1,6 +1,6 @@
 <?php
 // Conecta a la base de datos (debes tener una conexión a la base de datos configurada)
-include('db.php');
+include('dbMariaDB.php.php');
 ?>
 <!DOCTYPE html>
 <html>

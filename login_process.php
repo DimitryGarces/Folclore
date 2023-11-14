@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 // Incluye la conexión a la base de datos desde db.php
-include('db.php');
+include('dbMariaDB.php.php');
 session_start();
 
 // Verifica si se enviaron los datos del formulario
