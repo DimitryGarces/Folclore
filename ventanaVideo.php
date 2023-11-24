@@ -3,7 +3,7 @@ session_start(); // Asegúrate de haber iniciado la sesión
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,24 @@ session_start(); // Asegúrate de haber iniciado la sesión
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column; /* Alinea los elementos en columna */
+        }
+
+        .comment-section {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px; /* Ajusta según tus necesidades */
+        }
+
+        .comment-section textarea {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .comment-section input[type="submit"] {
+            padding: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -63,20 +81,29 @@ session_start(); // Asegúrate de haber iniciado la sesión
                     echo "No se especificó un video para mostrar.";
                 }
                 ?>
+            </div>
+
+            <div class="comment-section">
                 <h2>Deja tu comentario:</h2>
                 <form action="procesar_comentario.php" method="post">
-                    <textarea name="comentario" rows="4" cols="50" placeholder="Escribe tu comentario aquí"
-                        required></textarea>
+                    <textarea name="comentario" rows="4" placeholder="Escribe tu comentario aquí" required></textarea>
                     <br>
                     <input type="submit" value="Enviar comentario">
                 </form>
             </div>
         </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>¿Desea contactarnos para colaborar en un video?</p>
+                <p>Envíenos un correo a: <a href="mailto:chispafolklor@gmail.com">chispafolklor@gmail.com</a></p>
+            </div>
+        </footer>
     </body>
 
     </html>
     <?php
-            } else {
-                // Si el nombre de usuario no está en la sesión, maneja la situación apropiadamente
-            }
-            ?>
+    } else {
+        // Si el nombre de usuario no está en la sesión, maneja la situación apropiadamente
+    }
+    ?>
