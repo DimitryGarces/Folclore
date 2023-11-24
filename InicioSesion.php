@@ -15,6 +15,10 @@
     </style>
 </head>
 <body>
+    <!-- Botón de regreso -->
+    <a href="Principal.html" class="back-button">
+        <img src="css/volver.png" alt="Volver" width="50" height="50">
+    </a>
     <div class="formulario">
         <h1>Inicio de Sesión</h1>
                 <!-- Muestra el mensaje de error si existe -->

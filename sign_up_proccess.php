@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 // Incluye la conexión a la base de datos desde db.php
-include('dbMariaDB.php.php');
+include('dbMariaDB.php');
 
 // Inicia la sesión
 session_start();
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Consulta SQL para verificar la existencia de un usuario
         $sql_busqueda_usuario = "SELECT username
-                FROM user
+                FROM USER
                 WHERE username = ?";
         // Prepara la consulta para el usuario
         $stmt_busqueda_usuario = mysqli_prepare($con, $sql_busqueda_usuario);
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Ahora que hemos verificado que el usuario no existen, procedemos con la inserción
         // Consulta SQL para insertar datos en la tabla DatosPersonales
-        $sql_insertar_datos = "INSERT INTO user (Id_Rol, Name, LastName, UserName, Password, Age) 
+        $sql_insertar_datos = "INSERT INTO USER (Id_Rol, Name, LastName, UserName, Password, Age) 
         VALUES (2, ?, ?, ?, ?, ?)";
         // Prepara la consulta para la inserción
         $stmt_insertar_datos = mysqli_prepare($con, $sql_insertar_datos);

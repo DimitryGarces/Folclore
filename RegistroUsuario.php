@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <a href="javascript:history.back()" class="back-button">
+        <img src="css/volver.png" alt="Volver" width="50" height="50">
+    </a>
   <div class="sing-up_form">
     <h1>Registro</h1>
     <!-- Muestra el mensaje de error si existe -->

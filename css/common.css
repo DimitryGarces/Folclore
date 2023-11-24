@@ -49,4 +49,19 @@ a:hover{
     font-size: 66px;
 
   }
-  
+  .conoce-mas-btn {
+    display: none;
+    margin-top: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.ventana-info {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}

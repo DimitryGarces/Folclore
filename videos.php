@@ -1,6 +1,6 @@
 <?php
 // Conecta a la base de datos (debes tener una conexión a la base de datos configurada)
-include('dbMariaDB.php.php');
+include('dbMariaDB.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@ include('dbMariaDB.php.php');
 <body>
     <?php
     // Consulta SQL para seleccionar todos los videos
-    $sql = "SELECT * FROM Video";
+    $sql = "SELECT * FROM VIDEO";
 
     // Ejecuta la consulta
     $result = mysqli_query($con, $sql);
@@ -25,7 +25,7 @@ include('dbMariaDB.php.php');
             $description = $row['Description'];
             $state = $row['Id_state'];
             $path = $row['Path'];
-            $pathImage = $row['pathImage'];
+            $pathImage = $row['PathImage'];
 
             // Muestra la información del video en una plantilla HTML
             echo "<div class='video'>

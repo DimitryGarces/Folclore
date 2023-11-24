@@ -1,0 +1,101 @@
+**ROLE**
+1 -> Administrador
+2 -> Usuario
+
+insert into ROLE (Name) values ("Administrador");
+insert into ROLE (Name) values ("Usuario");
+
+
+
+**USER**
+
+INSERT INTO USER
+(Id_Rol, Name, LastName, USERName, Password, Age)
+VALUES ( "1","Fatima", "Serrano", "FatimaS", "folclore12", 21);
+
+INSERT INTO USER
+(Id_Rol, Name, LastName, USERName, Password, Age)
+VALUES ( "1","Diego", "Garces", "DiegoG", "folclore123", 22);
+
+INSERT INTO USER
+(Id_Rol, Name, LastName, USERName, Password, Age)
+VALUES ( "2","Sofia", "Monrroy", "Sof Monrroy", "sofi15*M", 18);
+
+INSERT INTO USER
+(Id_Rol, Name, LastName, USERName, Password, Age)
+VALUES ( "2","Carlos", "Lopez", "Lopez C", "LCarlos123*", 25);
+
+
+
+**STATE**
+1 -> Baja California
+2 -> Jalisco
+3 -> Veracruz
+
+insert into STATE (Name) values ("Baja California");
+insert into STATE (Name) values ("Jalisco");
+insert into STATE (Name) values ("Veracruz");
+
+
+**COSTUME**
+
+INSERT INTO COSTUME
+(Name, Path) VALUES ("Baja California", "costume/1.png");  
+
+INSERT INTO COSTUME
+(Name, Path) VALUES ("Jalisco", "costume/2.png"); 
+
+INSERT INTO COSTUME
+(Name, Path) VALUES ("Veracruz", "costume/3.png"); 
+
+
+
+Bailes Baja California
+1. "La loba del mal"
+2. "Redoblando"
+3. "Pájaro Campana"
+
+
+Bailes Jalisco
+1. "Son de la negra"
+2. "Jarabe Tapatío"
+3. "El carretero"
+
+Bailes Veracruz
+1. "Bruja"
+2. "Colas"
+3. "Cascabel"
+
+INSERT INTO VIDEO
+(Id_State, Title, Author, Path, DatePublic, Description, PathImage)
+VALUES
+(1, 'Baja California 1', 'Fatima Daniela Serrano Reyes','Videos/baja cali.MP4', '22/11/23', 'Baile tradicional de Baja california','pictures/baja cali.png'),
+(1, 'Baja California 2', 'Fatima Daniela Serrano Reyes','Videos/baja cali2.MP4', '22/11/23', 'Baile tradicional de Baja california','pictures/Baja Cali2.png'),
+(1, 'Baja California 3', 'Fatima Daniela Serrano Reyes','Videos/baja cali3.mp4', '22/11/23', 'Baile tradicional de Baja california','pictures/Baja cali3.png'),
+(1, 'Baja California 4', 'Fatima Daniela Serrano Reyes','Videos/baja california.mp4', '22/11/23', 'Baile tradicional de Baja california','pictures/baja california.png'),
+(1, 'Baja California 5', 'Fatima Daniela Serrano Reyes','Videos/BAJACAL_1.MP4', '22/11/23', 'Baile tradicional de Baja clifornia','pictures/BAJACAL_1.png'),
+(1, 'Baja California 6', 'Fatima Daniela Serrano Reyes','Videos/BAJACAL_2.MP4', '22/11/23', 'Baile tradicional de Baja clifornia','pictures/BAJACALI_2.png'),
+(1, 'Baja California 7', 'Fatima Daniela Serrano Reyes','Videos/BAJACAL_3.MP4', '22/11/23', 'Baile tradicional de Baja clifornia','pictures/BAJACALI_3.png'),
+(1, 'Baja California 8', 'Fatima Daniela Serrano Reyes','Videos/BAJACAL_4.MP4', '22/11/23', 'Baile tradicional de Baja clifornia','pictures/BAJACAL_4.png'),
+(1, 'Baja California 9', 'Fatima Daniela Serrano Reyes','Videos/BAJACAL_5.MP4', '22/11/23', 'Baile tradicional de Baja clifornia','pictures/BAJACAL_5.png'),
+(2, 'Baja California 10', 'Fatima Daniela Serrano Reyes','Videos/faldeo jalisco.MP4', '22/11/23', 'Baile tradicional de Jalisco','pictures/faldeo_jalisco.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/faldeo jalisco2.MP4', '22/11/23', 'Baile tradicional de Jalisco','pictures/faldeo_jalisco2.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/JALISCO_1.MP4', '22/11/23', 'Baile tradicional de Jalisco','pictures/JALISCO_1.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/JALISCO_2.MP4', '22/11/23', 'Baile tradicional de Jalisco','pictures/JALISCO_2.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/JALISCO_3.MP4', '22/11/23', 'Baile tradicional de Jalisco','pictures/JALISCO_3.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/JALISCO_4.MP4', '22/11/23', 'Baile tradicional de Jalisco','pictures/JALISCO_4.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/jalisco.mp4', '22/11/23', 'Baile tradicional de Jalisco','pictures/jalisco.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/jalisco1.mp4', '22/11/23', 'Baile tradicional de Jalisco','pictures/jalisco1.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/jalisco2.mp4', '22/11/23', 'Baile tradicional de Jalisco','pictures/jalisco2.png'),
+(2, 'Jalisco', 'Fatima Daniela Serrano Reyes','Videos/jalisco3.mp4', '22/11/23', 'Baile tradicional de Jalisco','pictures/jalisco3.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/veracruz (2).mp4', '22/11/23', 'Baile tradicional de Veracruz','pictures/veracruz(2).png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/VERACRUZ_1.MP4', '22/11/23', 'Baile tradicional de Veracruz','pictures/Veracruz_1.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/VERACRUZ_2.MP4', '22/11/23', 'Baile tradicional de Veracruz','pictures/Veracruz_2.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/VERACRUZ_3.MP4', '22/11/23', 'Baile tradicional de Veracruz','pictures/Veracruz_3.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/VERACRUZ_4.MP4', '22/11/23', 'Baile tradicional de Veracruz','pictures/Veracruz_4.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/veracruz.mp4', '22/11/23', 'Baile tradicional de Veracruz','pictures/veracruz.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/veracruz1.MP4', '22/11/23', 'Baile tradicional de Veracruz','pictures/veracruz1.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/veracruz2.MP4', '22/11/23', 'Baile tradicional de Veracruz','pictures/veracruz2.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/veracruz3.MP4', '22/11/23', 'Baile tradicional de Veracruz','pictures/veracruz3.png'),
+(3, 'Veracruz', 'Fatima Daniela Serrano Reyes','Videos/veracruzDos.mp4', '22/11/23', 'Baile tradicional de Veracruz','pictures/veracruzdos.png')
+;

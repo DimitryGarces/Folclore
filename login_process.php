@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 // Incluye la conexión a la base de datos desde db.php
-include('dbMariaDB.php.php');
+include('dbMariaDB.php');
 session_start();
 
 // Verifica si se enviaron los datos del formulario
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['nombre_usuario'] = $nombre_usuario;
     try {
         $sql_usuario = "SELECT Id_User, Id_Rol
-        FROM User
+        FROM USER
         WHERE UserName = ? 
         AND Password = ? ";
 
