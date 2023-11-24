@@ -17,8 +17,7 @@ if (isset($_SESSION['nombre_usuario'])) {
         // Maneja el caso en el que no se proporciona el parámetro "path"
         echo "No se especificó un video para mostrar.";
     }
-
-?>
+    ?>
 
     <!DOCTYPE html>
     <html>
@@ -27,6 +26,13 @@ if (isset($_SESSION['nombre_usuario'])) {
         <meta charset="UTF-8">
         <title>Video</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <style>
+            hr {
+                width: 100%;
+                margin: 20px 0;
+                border: 1px solid #333;
+            }
+        </style>
     </head>
 
     <body>
@@ -38,7 +44,9 @@ if (isset($_SESSION['nombre_usuario'])) {
             </nav>
             <div class="user-menu">
                 <div class="user-profile">
-                    <span><?php echo $nombre_usuario; ?></span>
+                    <span>
+                        <?php echo $nombre_usuario; ?>
+                    </span>
                 </div>
                 <ul>
                     <li><a href="#">Mi Perfil</a></li>
@@ -49,7 +57,12 @@ if (isset($_SESSION['nombre_usuario'])) {
 
         <main>
             <section class="video-grid">
-                <?php include('videos.php'); ?>
+                <h2>Baja California</h2>
+                <?php include('BJC.php'); ?>
+                <h2>Jalisco</h2>
+                <?php include('Jalisco.php'); ?>
+                <h2>Veracruz</h2>
+                <?php include('Veracruz.php'); ?>
             </section>
         </main>
 
@@ -62,11 +75,7 @@ if (isset($_SESSION['nombre_usuario'])) {
     </body>
 
     </html>
-
-    </body>
-
-    </html>
-<?php
+    <?php
 } else {
     // Si el nombre de usuario no está en la sesión, maneja la situación apropiadamente
 }
