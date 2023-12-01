@@ -43,6 +43,7 @@ if (isset($_SESSION['nombre_usuario'])) {
                 <section class="video-grid">
                     <?php include('BJC.php'); ?>
                 </section>
+                <img src="pictures/BAJA CAL.png" alt="Jalisco Image">
             </div>
 
             <div class="video-category">
@@ -50,6 +51,7 @@ if (isset($_SESSION['nombre_usuario'])) {
                 <section class="video-grid">
                     <?php include('Jalisco.php'); ?>
                 </section>
+                <img src="pictures/JAL.png" alt="Jalisco Image">
             </div>
 
             <div class="video-category">
@@ -57,6 +59,7 @@ if (isset($_SESSION['nombre_usuario'])) {
                 <section class="video-grid">
                     <?php include('Veracruz.php'); ?>
                 </section>
+                <img src="pictures/VERA.png" alt="Jalisco Image">
             </div>
             </section>
         </main>
@@ -69,7 +72,6 @@ if (isset($_SESSION['nombre_usuario'])) {
             </div>
         </footer>
 
-        <!-- JavaScript para abrir la ventana emergente -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const videoLinks = document.querySelectorAll('.video-link');
@@ -79,12 +81,16 @@ if (isset($_SESSION['nombre_usuario'])) {
                         event.preventDefault(); // Previene el comportamiento predeterminado del enlace
 
                         const videoURL = this.getAttribute('href');
-                        window.open(videoURL, 'muestra-video', 'width=800,height=600');
-                        console.log('Clic en el video:', videoURL); // Agregar un registro en la consola
+                        const nombreUsuario = "<?php echo $nombre_usuario; ?>"; // Obtén el nombre de usuario de PHP
+                        const videoURLConUsuario = `${videoURL}?usuario=${nombreUsuario}`;
+
+                        window.open(videoURLConUsuario, 'muestra-video', 'width=800,height=600');
+                        console.log('Clic en el video:', videoURLConUsuario); // Agregar un registro en la consola
                     });
                 });
             });
         </script>
+
     </body>
 
     </html>
@@ -92,5 +98,6 @@ if (isset($_SESSION['nombre_usuario'])) {
     <?php
 } else {
     // Si el nombre de usuario no está en la sesión, maneja la situación apropiadamente
+    echo "El nombre de usuario no está en la sesión.";
 }
 ?>
